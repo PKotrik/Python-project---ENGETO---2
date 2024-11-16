@@ -34,7 +34,6 @@ def user_input(answer: int) -> str:
     This function handles user input and verifies that the number provided by the user is numeric, does not start with 0 and consists of 4 digits.
     If the number does not comply with these requirements, this function is called again.
     """
-    answer
     input_digits = []
     number_of_digits = 0
 
