@@ -133,9 +133,17 @@ def bulls_cows_stats(generated_number: int, user_number: int) -> str:
     for digit in user_list:
         if digit in generated_list:
             cows += 1
+        else:
+            continue
+
     for i in range(len(generated_list)):
         if generated_list[i] == user_list[i]:
             bulls += 1
+        else:
+            continue
+
+    cows = cows - bulls
+
     if cows == 1 and bulls == 1:
         return print(f"{bulls} bull, {cows} cow", divider, sep="\n")
     elif cows == 1:
